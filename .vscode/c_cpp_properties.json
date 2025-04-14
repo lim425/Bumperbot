@@ -11,6 +11,7 @@
         "/home/junyi/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
         "/home/junyi/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
         "/opt/ros/humble/include/**",
+        "/home/junyi/bumperbot_ws/src/bumperbot_controller/include/**",
         "/home/junyi/bumperbot_ws/src/bumperbot_description/include/**",
         "/usr/include/**"
       ],

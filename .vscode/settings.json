@@ -30,5 +30,8 @@
         "/home/junyi/potbot_ws/install/self_driving_car_pkg/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+    ],
+    "files.associations": {
+        "geometry": "cpp"
+    }
 }
