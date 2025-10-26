@@ -33,5 +33,6 @@
     ],
     "files.associations": {
         "geometry": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/home/junyi/bumperbot_ws/src/bumperbot_bringup"
 }

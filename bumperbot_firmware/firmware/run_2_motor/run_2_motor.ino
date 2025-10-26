@@ -1,0 +1,40 @@
+// L298N H-Bridge Connection PINs
+#define L298N_enA 9  // PWM
+#define L298N_in2 13  // Dir Motor A
+#define L298N_in1 12  // Dir Motor A
+
+
+#define L298N_enB 11  // PWM
+#define L298N_in3 7  // Dir Motor B
+#define L298N_in4 8  
+
+float cmd = 0;
+
+void setup() {
+  // Set pin modes
+  pinMode(L298N_enA, OUTPUT);
+  pinMode(L298N_in1, OUTPUT);
+  pinMode(L298N_in2, OUTPUT);
+  
+  pinMode(L298N_enB, OUTPUT);
+  pinMode(L298N_in3, OUTPUT);
+  pinMode(L298N_in4, OUTPUT);
+
+  // Set Motor Rotation Direction
+  digitalWrite(L298N_in1, HIGH);
+  digitalWrite(L298N_in2, LOW);
+
+  digitalWrite(L298N_in3, HIGH);
+  digitalWrite(L298N_in4, LOW);
+
+  Serial.begin(115200);
+}
+
+void loop() {
+  if (Serial.available())
+  {
+    cmd = Serial.readString().toDouble();
+  }
+  analogWrite(L298N_enA, cmd*100);
+  analogWrite(L298N_enB, cmd*100);
+}
